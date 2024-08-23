@@ -1,9 +1,9 @@
 const express = require('express');
 // const cors = require('cors');
 // const helmet = require('helmet');
-const schoolRoutes = require('./routes/schoolroutes');
-const { sequelize } = require('./models');
 
+const { sequelize } = require('./models');
+const apiroutes=require('./routes/index')
 const app = express();
 
 // app.use(cors());
@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded());  
 
-app.use('/api', schoolRoutes);
+app.use('/api',apiroutes);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
