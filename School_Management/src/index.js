@@ -5,6 +5,7 @@ const express = require("express");
 const { sequelize } = require("./models");
 const apiroutes = require("./routes/index");
 const app = express();
+const {PORT}= require("./config/serverconfig")
 
 // app.use(cors());
 // app.use(helmet());
@@ -18,7 +19,7 @@ app.use((err, req, res, next) => {
   res.status(500).send("Something went wrong!");
 });
 
-const PORT = process.env.PORT || 3001;
+// const PORT = process.env.PORT || 3001;
 
 sequelize.sync().then(() => {
   app.listen(PORT, () => {
