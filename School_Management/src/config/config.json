@@ -18,7 +18,8 @@
     "username": "root",
     "password": "TucywUwcnDRUUxjKNUBGlNodLyFDhcGO",
     "database": "railway",
-    "host": "mysql.railway.internal",
-    "dialect": "mysql"
+    "host": "junction.proxy.rlwy.net",
+    "dialect": "mysql",
+    "port": 59383
   }
 }
